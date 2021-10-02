@@ -31,5 +31,5 @@ setuptools.setup(
         'Programming Language :: Python :: 3.9',
     ],
     
-    download_url="https://github.com/mike-mendoza/py_banshee_test/archive/refs/tags/0.0.0.8.tar.gz",
+    download_url="https://github.com/mike-mendoza/py_banshee_test/archive/refs/tags/0.0.0.9.tar.gz",
 )
