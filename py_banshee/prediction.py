@@ -36,27 +36,26 @@ def inference(
     inference conditionalizes a non-parametric
     Bayesian Network (NPBN) defined by the conditional rank correlation 
     matrix R and quantified by dataframe DATA. The NPBN is conditiona-
-    lized for each node defined in list NODES. Inference is made for
-    each column not included in list NODES and for each row in dataframe 
-    VALUES.
+    lized for each node defined in list Nodes. Inference is made for
+    each column not included in list Nodes and for each row in dataframe 
+    Values.
     Parameters
     ----------
     Nodes : list
         A list defining nodes to be conditionalized. The
         values of the list define the variables in the
         same order as in dataframe R. At least one node has to
-        be left out from NODES in order to make inferences
+        be left out from Nodes in order to make inferences
         at least for this one node. For example, if R is a
-        5-by-5 numpy array, NODES = [0 2 4] will conditionalize
+        5-by-5 numpy array, Nodes = [0, 2, 4] will conditionalize
         the BN using the first, third and fifth node and
         make inference of the second and fourth node.
     Values : pandas.core.frame.DataFrame
         A dataframe containing data on which the inference
         will be based upon. Data for each node need to be
         located in columns in the same order as specified 
-        in NODES. The number of columns need to at least 
-        equal the number of nodes specified in NODES.
-        Surplus columns will be disregarded.
+        in Nodes. The number of columns need to 
+        equal the number of nodes specified in Nodes.
     R : np.ndarray
         A matrix generated using bn_rankcorr function.
     DATA : pandas.core.frame.DataFrame
@@ -95,7 +94,7 @@ def inference(
     F : numpy.ndarray
         By default, provides an array with the 
         conditional empirical distributions for each row in
-        VALUES and each node not specified in NODES.
+        Values and each node not specified in Nodes.
     """
     # Defining nodes to be predicted and their number
     remaining_nodes = list_dif(list(range(R.shape[0])), Nodes)
@@ -142,7 +141,7 @@ def inference(
     # (auxiliary function 1 in bn_rankcorr.py)
     rpearson = ranktopearson(R)
 
-    # Loop for inference for each row in VALUES
+    # Loop for inference for each row in Values
     for j in range(n_values):
         # Obtaining the conditional inverse normal distributions at each node
         NormalCond = np.zeros(len(Nodes))  # preallocation

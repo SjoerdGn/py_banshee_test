@@ -17,7 +17,7 @@ import pingouin as pg
 import matplotlib.pyplot as plt
 
 
-def bn_rankcorr(parent_cell, data, is_data, plot=0, var_names):
+def bn_rankcorr(parent_cell, data, is_data, plot=0, var_names=[]):
     """
     bn_rankcorr creates a rank correlation matrix R 
     from a defined Bayesian Network (BN) structure parent_cell
@@ -44,12 +44,12 @@ def bn_rankcorr(parent_cell, data, is_data, plot=0, var_names):
         By default, a matrix containing data for 
         quantifying the NPBN. Data for each node need to be 
         located in columns in the same order as specified 
-        in PARENTCELL. The number of columns need to be at 
-        least equal to the number of nodes specified in 
-        PARENTCELL. Surplus columns will be disregarded.
+        in parent_cell. The number of columns needs to equal 
+        the number of nodes specified in 
+        parent_cell.
         Optionally, a cell array of rank correlations can
         be used, one conditional correlation per arc, 
-        following the same structure as PARENTCELL.
+        following the same structure as parent_cell.
     is_data : int
         Specifies the input data type:
             0 - cell array DATA contains rank correlations;

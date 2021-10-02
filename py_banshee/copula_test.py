@@ -39,7 +39,9 @@ def cvm_statistic(DATA, plot, names, fig_name=""):
     names : list
         list with the names of the variables for the plot
     fig_name : string
-        name to save the resulting plot         
+        Name extension of the .png file with the statistics that are created: 
+        cvm_statistics_'fig_name'.png. The file is saved in the 
+        working directory.         
     
     Returns
     -------
