@@ -7,7 +7,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setuptools.setup(
     name='py_banshee',                           # should match the package folder
     packages=['py_banshee'],                   # should match the package folder
-    version='0.0.0.8',                              # important for updates
+    version='0.0.0.9',                              # important for updates
     license='GNU',                                  # should match your chosen license
     description='Testing installation of Package',
     long_description=long_description,              # loads your README.md
