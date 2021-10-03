@@ -98,8 +98,8 @@ M = cvm_statistic(data,                   # DataFrame with data
 D_ERC,B_ERC,D_BNRC,B_BNRC = gaussian_distance(
                             R,        # the rank correlation matrix 
                             data,     # DataFrame with data
-                            500,      # number of samples drawn d-Cal(ERC,NRC)
-                            500,      # number of samples drawn d-Cal(NRC,BNRC)
+                            4000,      # number of samples drawn d-Cal(ERC,NRC)
+                            400,      # number of samples drawn d-Cal(NRC,BNRC)
                             1000,     # number of iterations to compute CI
                             1,        # create a plot (0=don't create plot)
                             'H',      # take Hellinger distance (default)
@@ -108,10 +108,9 @@ D_ERC,B_ERC,D_BNRC,B_BNRC = gaussian_distance(
 # obtain the distribution of the d-cal score
 
 # The d-calibration score of the empirical rank correlation matrix is
-# outside the 90# confidence interval of the determinant of the empirical
-# normal distribution, an unsatisfactory result. However, the d-calibration 
-# score of the BN's rank correlation matrix is well within the 90# 
-# confidence interval of the determinant of the random normal distribution 
+# inside the 90# confidence interval of the determinant of the empirical
+# The d-calibration score of the BN's rank correlation matrix is well within  
+# the 90# confidence interval of the determinant of the random normal distribution 
 # sampled for the same correlation matrix. This supports the assumptions of
 # a joint normal copula used in the BN model. It should be noted that the 
 # test is sensitive to the number of samples drawn as well as the number of 
