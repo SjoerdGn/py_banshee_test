@@ -435,7 +435,8 @@ def conditional_margins_hist(F,empirical_data,DATA,names,condition_nodes,distrib
                 plt.legend()
                 plt.ylabel("Count")
                 plt.title(names[remaining_nodes[i]], fontsize=15)
-                plt.savefig(names[remaining_nodes[i]]+'_uncond_cond.png')
+                plt.show()
+                plt.savefig(names[remaining_nodes[i]]+'_uncond_cond.png')   
         except:
             raise Exception('Check if argument Output in inference is equal to full')
     else:
@@ -457,10 +458,11 @@ def conditional_margins_hist(F,empirical_data,DATA,names,condition_nodes,distrib
                 plt.legend()
                 plt.ylabel("Count")
                 plt.title(names[remaining_nodes[i]], fontsize=15)
+                plt.show()
                 plt.savefig(names[remaining_nodes[i]]+'_uncond_cond.png')
         except:
             raise Exception('Check if argument Output in inference is equal to full')
-    return 
+    return None
 
 
 

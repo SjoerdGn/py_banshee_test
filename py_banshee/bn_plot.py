@@ -17,7 +17,6 @@ import pandas as pd
 from matplotlib import pyplot as plt
 from IPython.display import Image
 import os
-os.environ['PATH'] = os.environ['PATH']+';'+os.environ['CONDA_PREFIX']+r"\Library\bin\graphviz"   #to use dot graphviz
 
 
 def bn_visualize(parent_cell, R, names, data=None,fig_name=''):

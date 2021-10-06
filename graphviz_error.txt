@@ -1,0 +1,14 @@
+NOTE:  
+It could happen that an Graphviz error arises. 
+To solve the problem add the Graphviz executables on your systems' PATH as follows: 
+
+– Press the Windows key 
+– Type in the search box: edit environment variables for your account 
+– Select Path 
+– Click Edit… button  
+– Click New 
+– Paste the route of the Graphviz bin folder, for example: C:\Program Files (x86)\Graphviz2.38\bin 
+– Click OK and OK again 
+
+Once have done that, restart you python IDE (if its open) 
+
