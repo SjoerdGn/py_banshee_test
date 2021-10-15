@@ -66,7 +66,7 @@ F = inference(Nodes = condition_nodes,      #Nodes that will be conditionalized
               parameters=parameters,        #Corresponfing parameters of the distributions
               Output='full')                #Conditional empirical distributions
 
-#%%Un-conditional and conditinal marginal histograms
+#%%Un-conditional and conditional marginal histograms
 conditional_margins_hist(F,                                 #conditional empirical distributions
                         empirical_data = 0,                 #Nodes of the NPBN are parametric distributions
                         DATA = [],                          #No empirical data is provided
@@ -75,7 +75,7 @@ conditional_margins_hist(F,                                 #conditional empiric
                         distributions=distributions,        #Corresponig distributions names of the nodes
                         parameters=parameters)              #Corresponfing parameters of the distributions
 
-# The plot shows a comprasion of un-conditional and conditinal marginal histograms.
+# The plot shows a comprasion of un-conditional and conditional marginal histograms.
 # The un-conditional marginal histograms are computed with random samples of the provided parametric distributions. 
 # The conditional marginal histograms are computed with the outpuf of the INFERENCE function.
 

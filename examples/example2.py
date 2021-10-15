@@ -8,7 +8,7 @@ from py_banshee.rankcorr import bn_rankcorr
 from py_banshee.bn_plot import bn_visualize
 from py_banshee.copula_test import cvm_statistic
 from py_banshee.d_cal import gaussian_distance
-from py_banshee.prediction import inference,conditinal_margins_hist
+from py_banshee.prediction import inference,conditional_margins_hist
 
 import numpy as np
 import pandas as pd
@@ -79,6 +79,4 @@ F = inference(condition_nodes,
               Output='full')
 #%% un-conditional and conditional marginal histograms
 #  only works if argument Output = 'full' in inference 
-conditinal_margins_hist(F,data,names,condition_nodes)
-
-
+conditional_margins_hist(F,1,data,names,condition_nodes)
