@@ -383,7 +383,7 @@ def conditional_margins_hist(F,empirical_data,DATA,names,condition_nodes,distrib
         conditional empirical distributions for each row in
         Values and each node not specified in Nodes.
     empirical_data : int
-        1 = DATA is a pd.DataFrame with emprical observations
+        1 = DATA is a pd.DataFrame with empirical observations
         if 1 distributions and parameters should be empty i.e. 
         distributions=[], parameters=[]
         0 = Nodes are parametric distributions, no empirical observations available
